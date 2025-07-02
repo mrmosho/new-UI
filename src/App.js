@@ -56,7 +56,7 @@ function App() {
             </button>
           </div>
 
-          {/* Smaller Search by Share Input */}
+          {/* Share Search Input (below main bar) */}
           <div className="keyword-box">
             <input
               type="text"
