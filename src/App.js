@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './App.css';
 import { FaSearch, FaCalendarAlt } from 'react-icons/fa';
@@ -33,16 +32,29 @@ function App() {
       <img src="/logo.jpg" alt="Logo" className="logo" />
 
       <div className="search-section">
-        <div className="tagline">Vector Search</div>
+        <div className="tagline">Smarter search. Better results. Faster decisions.</div>
 
         <div className="search-container">
+          {/* Smaller search bar on the left */}
+          <div className="keyword-box">
+            <input
+              type="text"
+              placeholder="search by share"
+              value={keywords}
+              onChange={e => setKeywords(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
+              disabled={loading}
+            />
+          </div>
+
+          {/* Main search bar */}
           <div className="search-box">
             <div className="icon">
               <FaSearch />
             </div>
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="what are you looking for?"
               value={query}
               onChange={e => setQuery(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
@@ -54,17 +66,6 @@ function App() {
             <button onClick={handleSearch} disabled={loading || (!query.trim() && !keywords.trim())}>
               {loading ? 'Searching...' : 'Search'}
             </button>
-          </div>
-
-          <div className="keyword-box">
-            <input
-              type="text"
-              placeholder="Keywords (optional)..."
-              value={keywords}
-              onChange={e => setKeywords(e.target.value)}
-              onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
-              disabled={loading}
-            />
           </div>
         </div>
 
