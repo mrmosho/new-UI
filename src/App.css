@@ -26,26 +26,25 @@ body {
   font-size: 35px;
   font-style: italic;
   color: #144c6c;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.search-container {
+/* Stacked group */
+.search-group {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  max-width: 1000px;
+  max-width: 720px;
 }
 
 /* Main search box */
 .search-box {
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 2px solid #0d5b80;
   border-radius: 10px;
   overflow: hidden;
-  width: 700px;
+  width: 100%;
   height: 60px;
   background-color: #f4f6fb;
   position: relative;
@@ -91,13 +90,12 @@ body {
   border-radius: 0 9px 9px 0;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Smaller keyword box */
+/* Smaller share search */
 .keyword-box {
-  flex-shrink: 0;
-  max-width: 220px;
+  max-width: 100%;
 }
 
 .keyword-box input {
@@ -124,7 +122,7 @@ body {
   border: 2px solid #0d5b80;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -144,68 +142,3 @@ body {
 .date-input-group label {
   font-size: 16px;
   color: #144c6c;
-  font-weight: 500;
-  min-width: 50px;
-}
-
-.date-input-group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  outline: none;
-  background-color: white;
-  color: #144c6c;
-}
-
-.date-input-group input:focus {
-  border-color: #0d5b80;
-}
-
-.error {
-  color: red;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #ffe6e6;
-  border-radius: 5px;
-}
-
-.results {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-/* Triangle & rectangles */
-.triangle-right {
-  position: absolute;
-  right: 0;
-  top: 150px;
-  width: 0;
-  height: 0;
-  border-top: 130px solid transparent;
-  border-bottom: 130px solid transparent;
-  border-left: 230px solid #38a4d4;
-  z-index: 0;
-}
-
-.rectangle-top,
-.rectangle-bottom {
-  position: absolute;
-  right: 0;
-  width: 230px;
-  height: 80px;
-  background-color: #0d5b80;
-  z-index: -1;
-}
-
-.rectangle-top {
-  top: 20px;
-}
-
-.rectangle-bottom {
-  top: 410px;
-}
