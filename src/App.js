@@ -31,7 +31,12 @@ function App() {
     <div className="container">
       <img src="/logo.jpg" alt="Logo" className="logo" />
 
-      <div className="search-section">
+    
+
+      <br>
+    <br>
+    <br>
+    <div className="search-section">
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
     
         <div className="search-group">
