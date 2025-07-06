@@ -35,7 +35,7 @@ function App() {
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
 
         <div className="search-group">
-          {/* Share search on the left (smaller) */}
+          {/* ✅ Smaller search by share on the left */}
           <div className="keyword-box">
             <input
               type="text"
@@ -47,7 +47,7 @@ function App() {
             />
           </div>
 
-          {/* Main Search Bar */}
+          {/* ✅ Main search bar on the right */}
           <div className="search-box">
             <div className="icon">
               <FaSearch />
