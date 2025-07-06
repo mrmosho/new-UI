@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -19,7 +18,7 @@ body {
 }
 
 .search-section {
-  width: 900px;
+  width: 950px;
   margin: 0 auto;
   text-align: left;
 }
@@ -31,19 +30,20 @@ body {
   margin-bottom: 30px;
 }
 
-/* ✅ Horizontal layout for the two search bars with adjusted widths */
+/* ✅ Horizontal layout for the two search bars - wider and aligned with triangle vertex */
 .search-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
+  margin-top: 50px;
 }
 
-/* ✅ Smaller box for share search - adjusted width */
+/* ✅ Smaller box for share search - wider but still smaller */
 .keyword-box {
-  width: 180px;
+  width: 220px;
   flex-shrink: 0;
 }
 
@@ -66,7 +66,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ✅ Main search bar styling - adjusted width to align with triangle */
+/* ✅ Main search bar styling - wider and aligned for button-triangle alignment */
 .search-box {
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   flex: 1;
-  max-width: 580px;
+  max-width: 600px;
   height: 60px;
   background-color: transparent;
   position: relative;
@@ -115,22 +115,24 @@ body {
   height: 60px;
   color: white;
   border: none;
-  padding: 15px 25px;
+  padding: 15px 30px;
   font-size: 16px;
   border-radius: 0 9px 9px 0;
   cursor: pointer;
   position: relative;
   z-index: 2;
+  width: 120px;
 }
 
-/* ✅ Date filter positioned below search bars */
+/* ✅ Larger date filter positioned below main search bar only */
 .date-filter {
   background-color: #f4f6fb;
   border: 2px solid #0d5b80;
   border-radius: 10px;
-  padding: 15px;
-  margin-top: 20px;
-  width: 400px;
+  padding: 20px;
+  margin-top: 25px;
+  margin-left: 240px;
+  width: 480px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -186,13 +188,13 @@ body {
   overflow-y: auto;
 }
 
-/* Sigma Shapes with even spacing */
+/* Enlarged Sigma Shapes with perfectly even spacing */
 .rectangle-top,
 .rectangle-bottom {
   position: absolute;
   right: 0;
-  width: 280px;
-  height: 100px;
+  width: 350px;
+  height: 120px;
   background-color: #0d5b80;
   z-index: 0;
 }
@@ -202,17 +204,17 @@ body {
 }
 
 .rectangle-bottom {
-  top: 490px;
+  top: 540px;
 }
 
 .triangle-right {
   position: absolute;
   right: 0;
-  top: 170px;
+  top: 180px;
   width: 0;
   height: 0;
-  border-top: 150px solid transparent;
-  border-bottom: 150px solid transparent;
-  border-left: 280px solid #38a4d4;
+  border-top: 180px solid transparent;
+  border-bottom: 180px solid transparent;
+  border-left: 350px solid #38a4d4;
   z-index: 0;
 }
