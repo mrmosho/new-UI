@@ -30,15 +30,15 @@ body {
   margin-bottom: 30px;
 }
 
-/* Stacked vertical layout for left side */
-.search-group {
+/* Horizontal layout for 2 bars */
+.row-layout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
-  max-width: 720px;
 }
 
-/* Main search box with transparent container */
+/* Main search bar */
 .search-box {
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 60px;
-  background-color: transparent; /* Made transparent */
+  background-color: transparent;
   position: relative;
   z-index: 1;
 }
@@ -58,7 +58,6 @@ body {
   color: #0d5b80;
 }
 
-/* Input field background retained */
 .search-box input {
   border: none;
   padding: 15px;
@@ -97,7 +96,8 @@ body {
 
 /* Share search box */
 .keyword-box {
-  max-width: 100%;
+  width: 200px;
+  flex-shrink: 0;
 }
 
 .keyword-box input {
