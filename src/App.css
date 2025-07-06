@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -18,7 +19,7 @@ body {
 }
 
 .search-section {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
   text-align: left;
 }
@@ -30,19 +31,19 @@ body {
   margin-bottom: 30px;
 }
 
-/* ✅ Horizontal layout for the two search bars with reduced widths */
+/* ✅ Horizontal layout for the two search bars with adjusted widths */
 .search-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
 }
 
-/* ✅ Smaller box for share search - reduced width */
+/* ✅ Smaller box for share search - adjusted width */
 .keyword-box {
-  width: 150px;
+  width: 180px;
   flex-shrink: 0;
 }
 
@@ -65,7 +66,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ✅ Main search bar styling - reduced width */
+/* ✅ Main search bar styling - adjusted width to align with triangle */
 .search-box {
   display: flex;
   align-items: center;
@@ -73,7 +74,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   flex: 1;
-  max-width: 500px;
+  max-width: 580px;
   height: 60px;
   background-color: transparent;
   position: relative;
@@ -122,18 +123,15 @@ body {
   z-index: 2;
 }
 
-/* ✅ Compact date filter positioned to overlay triangle */
+/* ✅ Date filter positioned below search bars */
 .date-filter {
   background-color: #f4f6fb;
   border: 2px solid #0d5b80;
   border-radius: 10px;
   padding: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
   width: 400px;
   box-sizing: border-box;
-  position: absolute;
-  right: 100px;
-  z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -188,7 +186,7 @@ body {
   overflow-y: auto;
 }
 
-/* Sigma Shapes */
+/* Sigma Shapes with even spacing */
 .rectangle-top,
 .rectangle-bottom {
   position: absolute;
@@ -204,7 +202,7 @@ body {
 }
 
 .rectangle-bottom {
-  top: 450px;
+  top: 490px;
 }
 
 .triangle-right {
