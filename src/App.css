@@ -200,11 +200,11 @@ body {
 }
 
 .rectangle-top {
-  top: 20px;
+  top: 0px;
 }
 
 .rectangle-bottom {
-  top: 540px;
+  top: 560px;
 }
 
 .triangle-right {
