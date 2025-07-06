@@ -43,7 +43,7 @@ body {
 
 /* ✅ Smaller box for share search - wider but still smaller */
 .keyword-box {
-  width: 220px;
+  width: 280px;
   flex-shrink: 0;
 }
 
@@ -74,7 +74,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   flex: 1;
-  max-width: 600px;
+  max-width: 720px;
   height: 60px;
   background-color: transparent;
   position: relative;
