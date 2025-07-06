@@ -30,7 +30,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* ✅ FIX: Horizontal search bar layout */
+/* ✅ Horizontal layout for the two search bars */
 .search-group {
   display: flex;
   flex-direction: row;
@@ -40,7 +40,32 @@ body {
   max-width: 1000px;
 }
 
-/* Main search bar */
+/* ✅ Smaller box for share search */
+.keyword-box {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.keyword-box input {
+  width: 100%;
+  height: 60px;
+  border: 2px solid #0d5b80;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  outline: none;
+  background-color: #f4f6fb;
+  color: #144c6c;
+  box-sizing: border-box;
+}
+
+.keyword-box input::placeholder {
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* ✅ Main search bar styling */
 .search-box {
   display: flex;
   align-items: center;
@@ -94,31 +119,6 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 2;
-}
-
-/* Share search box - smaller, left side */
-.keyword-box {
-  width: 200px;
-  flex-shrink: 0;
-}
-
-.keyword-box input {
-  width: 100%;
-  height: 60px;
-  border: 2px solid #0d5b80;
-  border-radius: 10px;
-  padding: 15px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  outline: none;
-  background-color: #f4f6fb;
-  color: #144c6c;
-  box-sizing: border-box;
-}
-
-.keyword-box input::placeholder {
-  color: #999;
-  letter-spacing: 1px;
 }
 
 .date-filter {
@@ -181,7 +181,7 @@ body {
   overflow-y: auto;
 }
 
-/* Sigma Shape */
+/* Sigma Shapes */
 .rectangle-top,
 .rectangle-bottom {
   position: absolute;
