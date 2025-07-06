@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from 'react';
 import './App.css';
 import { FaSearch, FaCalendarAlt } from 'react-icons/fa';
@@ -34,15 +35,27 @@ function App() {
       <div className="search-section">
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
 
-        <div className="search-group">
-          {/* Main Search Bar */}
+        <div className="search-group horizontal">
+          {/* Share search (left) */}
+          <div className="keyword-box small">
+            <input
+              type="text"
+              placeholder="search by share"
+              value={keywords}
+              onChange={e => setKeywords(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
+              disabled={loading}
+            />
+          </div>
+
+          {/* Main Search */}
           <div className="search-box">
             <div className="icon">
               <FaSearch />
             </div>
             <input
               type="text"
-              placeholder="what are you looking for?"
+              placeholder="What are you looking for ?"
               value={query}
               onChange={e => setQuery(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
@@ -54,18 +67,6 @@ function App() {
             <button onClick={handleSearch} disabled={loading || (!query.trim() && !keywords.trim())}>
               {loading ? 'Searching...' : 'Search'}
             </button>
-          </div>
-
-          {/* Share Search Input (below main bar) */}
-          <div className="keyword-box">
-            <input
-              type="text"
-              placeholder="search by share"
-              value={keywords}
-              onChange={e => setKeywords(e.target.value)}
-              onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
-              disabled={loading}
-            />
           </div>
         </div>
 
@@ -102,7 +103,7 @@ function App() {
         )}
       </div>
 
-      {/* Sigma-like shape */}
+      {/* Sigma side */}
       <div className="rectangle-top"></div>
       <div className="triangle-right"></div>
       <div className="rectangle-bottom"></div>
