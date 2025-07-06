@@ -32,10 +32,6 @@ function App() {
       <img src="/logo.jpg" alt="Logo" className="logo" />
 
     
-
-      <br>
-    <br>
-    <br>
     <div className="search-section">
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
     
