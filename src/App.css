@@ -30,12 +30,14 @@ body {
   margin-bottom: 30px;
 }
 
-/* Horizontal layout for 2 bars */
-.row-layout {
+/* ✅ FIX: Horizontal search bar layout */
+.search-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 /* Main search bar */
@@ -45,7 +47,7 @@ body {
   border: 2px solid #0d5b80;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
+  flex: 1;
   height: 60px;
   background-color: transparent;
   position: relative;
@@ -94,7 +96,7 @@ body {
   z-index: 2;
 }
 
-/* Share search box */
+/* Share search box - smaller, left side */
 .keyword-box {
   width: 200px;
   flex-shrink: 0;
