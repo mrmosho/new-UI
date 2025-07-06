@@ -34,7 +34,19 @@ function App() {
       <div className="search-section">
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
 
-        <div className="search-group">
+        <div className="search-group row-layout">
+          {/* Share search on the left (smaller) */}
+          <div className="keyword-box">
+            <input
+              type="text"
+              placeholder="search by share"
+              value={keywords}
+              onChange={e => setKeywords(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
+              disabled={loading}
+            />
+          </div>
+
           {/* Main Search Bar */}
           <div className="search-box">
             <div className="icon">
@@ -54,18 +66,6 @@ function App() {
             <button onClick={handleSearch} disabled={loading || (!query.trim() && !keywords.trim())}>
               {loading ? 'Searching...' : 'Search'}
             </button>
-          </div>
-
-          {/* Share Search Input (below main bar) */}
-          <div className="keyword-box">
-            <input
-              type="text"
-              placeholder="search by share"
-              value={keywords}
-              onChange={e => setKeywords(e.target.value)}
-              onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }}
-              disabled={loading}
-            />
           </div>
         </div>
 
@@ -102,7 +102,7 @@ function App() {
         )}
       </div>
 
-      {/* Sigma-like shape */}
+      {/* Sigma-like shapes */}
       <div className="rectangle-top"></div>
       <div className="triangle-right"></div>
       <div className="rectangle-bottom"></div>
