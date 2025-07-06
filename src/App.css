@@ -30,20 +30,20 @@ body {
   margin-bottom: 30px;
 }
 
-/* ✅ Horizontal layout for the two search bars - wider and aligned with triangle vertex */
+/* ✅ Horizontal layout for the two search bars - moved down to align with triangle vertex */
 .search-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
   width: 100%;
-  max-width: 850px;
-  margin-top: 50px;
+  max-width: 900px;
+  margin-top: 100px;
 }
 
-/* ✅ Smaller box for share search - wider but still smaller */
+/* ✅ Smaller box for share search - wider for button alignment */
 .keyword-box {
-  width: 220px;
+  width: 280px;
   flex-shrink: 0;
 }
 
@@ -66,7 +66,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ✅ Main search bar styling - wider and aligned for button-triangle alignment */
+/* ✅ Main search bar styling - wider for perfect button-triangle alignment */
 .search-box {
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   flex: 1;
-  max-width: 600px;
+  max-width: 700px;
   height: 60px;
   background-color: transparent;
   position: relative;
@@ -124,15 +124,15 @@ body {
   width: 120px;
 }
 
-/* ✅ Larger date filter positioned below main search bar only */
+/* ✅ Date filter positioned below main search bar with adjusted positioning */
 .date-filter {
   background-color: #f4f6fb;
   border: 2px solid #0d5b80;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
   margin-top: 25px;
-  margin-left: 240px;
-  width: 480px;
+  margin-left: 300px;
+  width: 520px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -188,13 +188,13 @@ body {
   overflow-y: auto;
 }
 
-/* Enlarged Sigma Shapes with perfectly even spacing */
+/* Enlarged Sigma Shapes with perfectly equal spacing for symmetry */
 .rectangle-top,
 .rectangle-bottom {
   position: absolute;
   right: 0;
-  width: 350px;
-  height: 120px;
+  width: 400px;
+  height: 140px;
   background-color: #0d5b80;
   z-index: 0;
 }
@@ -204,17 +204,17 @@ body {
 }
 
 .rectangle-bottom {
-  top: 540px;
+  top: 580px;
 }
 
 .triangle-right {
   position: absolute;
   right: 0;
-  top: 180px;
+  top: 220px;
   width: 0;
   height: 0;
   border-top: 180px solid transparent;
   border-bottom: 180px solid transparent;
-  border-left: 350px solid #38a4d4;
+  border-left: 400px solid #38a4d4;
   z-index: 0;
 }
