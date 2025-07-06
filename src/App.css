@@ -1,211 +1,73 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
-}
-
-.container {
-  text-align: left;
-  padding: 40px;
-  position: relative;
-  background-color: transparent;
-}
-
-.logo {
-  width: 120px;
-  text-align: left;
-  margin-bottom: 60px;
-}
-
-.search-section {
-  width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.tagline {
-  font-size: 35px;
-  font-style: italic;
-  color: #144c6c;
-  margin-bottom: 30px;
-}
-
-/* Stacked vertical layout for left side */
-.search-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 720px;
-}
-
-/* Main search box with transparent container */
-.search-box {
-  display: flex;
-  align-items: center;
-  border: 2px solid #0d5b80;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  height: 60px;
-  background-color: transparent; /* Made transparent */
-  position: relative;
-  z-index: 1;
-}
-
-.search-box .icon {
-  font-size: 24px;
-  padding: 10px;
-  color: #0d5b80;
-}
-
-/* Input field background retained */
-.search-box input {
-  border: none;
-  padding: 15px;
-  flex: 1;
-  font-size: 16px;
-  letter-spacing: 3px;
-  outline: none;
-  background-color: #f4f6fb;
-  color: #144c6c;
-}
-
-.date-filter-toggle {
-  font-size: 20px;
-  padding: 10px;
-  color: #0d5b80;
-  cursor: pointer;
-  border-left: 1px solid #ccc;
-}
-
-.date-filter-toggle:hover {
-  background-color: #e8f4f8;
-}
-
-.search-box button {
-  background-color: #0d5b80;
-  height: 60px;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  font-size: 16px;
-  border-radius: 0 9px 9px 0;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-
-/* Share search box */
-.keyword-box {
-  max-width: 100%;
-}
-
-.keyword-box input {
-  width: 100%;
-  height: 60px;
-  border: 2px solid #0d5b80;
-  border-radius: 10px;
-  padding: 15px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  outline: none;
-  background-color: #f4f6fb;
-  color: #144c6c;
-  box-sizing: border-box;
-}
-
-.keyword-box input::placeholder {
-  color: #999;
-  letter-spacing: 1px;
-}
-
-.date-filter {
-  background-color: #f4f6fb;
-  border: 2px solid #0d5b80;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.date-inputs {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.date-input-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.date-input-group label {
-  font-size: 16px;
-  color: #144c6c;
-  font-weight: 500;
-  min-width: 50px;
-}
-
-.date-input-group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  outline: none;
-  background-color: white;
-  color: #144c6c;
-}
-
-.date-input-group input:focus {
-  border-color: #0d5b80;
-}
-
-.error {
-  color: red;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #ffe6e6;
-  border-radius: 5px;
-}
-
-.results {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-/* Sigma Shape */
+/* Ensure entire right side is covered */
 .rectangle-top,
 .rectangle-bottom {
   position: absolute;
   right: 0;
-  width: 230px;
-  height: 80px;
+  width: 33vw; /* stretch based on screen */
+  height: 100px;
   background-color: #0d5b80;
   z-index: 0;
 }
 
 .rectangle-top {
-  top: 20px;
+  top: 0;
 }
 
 .rectangle-bottom {
-  top: 410px;
+  bottom: 0;
 }
 
 .triangle-right {
   position: absolute;
   right: 0;
-  top: 150px;
+  top: 33%;
   width: 0;
   height: 0;
-  border-top: 130px solid transparent;
-  border-bottom: 130px solid transparent;
-  border-left: 230px solid #38a4d4;
+  border-top: 180px solid transparent;
+  border-bottom: 180px solid transparent;
+  border-left: 280px solid #38a4d4;
   z-index: 0;
+}
+
+/* Horizontal layout */
+.search-group.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+/* Small keyword box */
+.keyword-box.small {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.keyword-box.small input {
+  height: 60px;
+  font-size: 14px;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+
+/* Search button stays on top of triangle */
+.search-box button {
+  z-index: 2;
+  position: relative;
+}
+
+/* Date dropdown tweaks */
+.date-filter {
+  max-width: 480px;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.date-inputs {
+  gap: 20px;
+}
+
+.date-input-group input {
+  width: 140px;
 }
