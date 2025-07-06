@@ -3,7 +3,7 @@
 export const fetchData = async (query, keywords = "", dateFrom = "", dateTo = "") => {
   try {
     // Build URL with all parameters
-    let url = `http://192.168.162.228:8000/search?q=${encodeURIComponent(query)}`;
+    let url = `https://817f-62-193-124-9.ngrok-free.app/search?q=${encodeURIComponent(query)}`;
     
     if (keywords.trim()) {
       url += `&keywords=${encodeURIComponent(keywords)}`;
