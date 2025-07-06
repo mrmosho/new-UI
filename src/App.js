@@ -34,7 +34,7 @@ function App() {
       <div className="search-section">
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
 
-        <div className="search-group row-layout">
+        <div className="search-group">
           {/* Share search on the left (smaller) */}
           <div className="keyword-box">
             <input
