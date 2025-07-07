@@ -10,7 +10,7 @@ export interface SearchResult {
   summary?: string;
 }
 
-const API_BASE_URL = 'https://817f-62-193-124-9.ngrok-free.app';
+const API_BASE_URL = 'https://c968-62-193-124-9.ngrok-free.app';
 
 export const searchAPI = async (query: string): Promise<SearchResult[]> => {
   console.log(`Searching for: ${query}`);
